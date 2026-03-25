@@ -1,0 +1,117 @@
+/* AppeX Design System — Color Tokens (from Figma Colors page) */
+.appex-button {
+  /* Primary palette */
+  --color-fortress-black: #0a0f1f;
+  --color-fortress-black-hover: #080c19;
+  --color-capital-yellow: #fed607;
+  --color-capital-yellow-hover: #e5c106;
+  --color-capital-yellow-active: #cbab05;
+  --color-glint-yellow: #faf28b;
+  --color-node-purple: #5a1ccb;
+  --color-node-purple-hover: #4e14b6;
+  --color-ether-mist: #b9a0cc;
+
+  /* Component tokens */
+  --button-font-family: system-ui, -apple-system, sans-serif;
+  --button-font-weight: 600;
+  --button-border-radius: 8px;
+  --button-padding-y: 10px;
+  --button-padding-x: 24px;
+  --button-font-size: 14px;
+  --button-transition: background-color 150ms ease, color 150ms ease,
+    border-color 150ms ease, opacity 150ms ease;
+
+  /* Reset */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  line-height: 1.4;
+  cursor: pointer;
+  transition: var(--button-transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.appex-button:focus-visible {
+  outline: 2px solid var(--color-node-purple);
+  outline-offset: 2px;
+}
+
+.appex-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ——— Variant: primary (Capital Yellow bg, Fortress Black text) ——— */
+.appex-button--primary {
+  background-color: var(--color-capital-yellow);
+  color: var(--color-fortress-black);
+}
+
+.appex-button--primary:hover:not(:disabled) {
+  background-color: var(--color-capital-yellow-hover);
+}
+
+.appex-button--primary:active:not(:disabled) {
+  background-color: var(--color-capital-yellow-active);
+}
+
+/* ——— Variant: secondary (Fortress Black bg, Capital Yellow text) ——— */
+.appex-button--secondary {
+  background-color: var(--color-fortress-black);
+  color: var(--color-capital-yellow);
+}
+
+.appex-button--secondary:hover:not(:disabled) {
+  background-color: var(--color-fortress-black-hover);
+}
+
+/* ——— Variant: outline (transparent bg, Fortress Black border & text) ——— */
+.appex-button--outline {
+  background-color: transparent;
+  color: var(--color-fortress-black);
+  border-color: var(--color-fortress-black);
+}
+
+.appex-button--outline:hover:not(:disabled) {
+  background-color: var(--color-fortress-black);
+  color: var(--color-capital-yellow);
+}
+
+/* ——— Variant: ghost (transparent, no border) ——— */
+.appex-button--ghost {
+  background-color: transparent;
+  color: var(--color-fortress-black);
+}
+
+.appex-button--ghost:hover:not(:disabled) {
+  background-color: var(--color-glint-yellow);
+}
+
+/* ——— Variant: purple (Node Purple bg, white text) ——— */
+.appex-button--purple {
+  background-color: var(--color-node-purple);
+  color: #ffffff;
+}
+
+.appex-button--purple:hover:not(:disabled) {
+  background-color: var(--color-node-purple-hover);
+}
+
+/* ——— Sizes ——— */
+.appex-button--sm {
+  padding: 6px 16px;
+  font-size: 12px;
+}
+
+.appex-button--lg {
+  padding: 14px 32px;
+  font-size: 16px;
+}
